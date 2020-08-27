@@ -1,0 +1,24 @@
+aside {
+    width: 180px;
+    margin-right: 15px;
+    vertical-align: top;
+    float: left;
+  }
+
+  section {
+    width: 700px;
+    float: left;
+  }
+
+
+  aside {
+    width: 180px;
+    margin-right: 15px;
+    display: inline-block;
+    vertical-align: top;
+  }
+  
+  section {
+    width: 700px;
+    display: inline-block;
+  }
