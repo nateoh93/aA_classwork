@@ -86,6 +86,8 @@ has_many :appointments,
   foreign_key: :physician_id,
   class_name: :appointments
 
+through: appts
+source:patient
 # Table name: appointments
 #
 #  id   :integer           not null, primary key
