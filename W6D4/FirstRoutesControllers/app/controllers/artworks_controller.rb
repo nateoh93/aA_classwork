@@ -13,7 +13,7 @@ class ArtworksController < ApplicationController
 
     def create
         artwork = Artwork.new(artwork_params)
-        debugger
+        # debugger
         if artwork.save
             render json: artwork
         else
