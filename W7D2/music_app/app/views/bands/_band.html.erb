@@ -1,0 +1,8 @@
+<% if action == :show %>
+    <li><a href="<%= bands_url %>">All the bands</a></li>
+<% else %>
+    <li><a href="<%= edit_band_url(band) %>">Edit <%= band.name %></a></li>
+    <li><a href="<%= band_url(band) %>"><%= band.name %>'s Page!</a></li>
+<% end %>
+
+<li><%= band.name %></li>

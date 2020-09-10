@@ -1,0 +1,7 @@
+<h1>Here are all the bands!</h1>
+
+<ul>
+    <% @bands.each do |band| %>
+    <%= render "band", band: band, action: :index %>
+    <% end %>
+</ul>

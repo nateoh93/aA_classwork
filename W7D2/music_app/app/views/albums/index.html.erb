@@ -1,0 +1,10 @@
+<h1>Here are ALL the Albums!!</h1>
+
+<a href="<%= new_band_album_url(params[:band_id]) %>">Create New Album</a>
+
+
+<ul>
+    <% @albums.each do |album| %>
+        <%= render 'album', album: album, action: :index %>
+    <% end %>
+</ul>

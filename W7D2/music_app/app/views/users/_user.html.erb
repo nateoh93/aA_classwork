@@ -1,0 +1,11 @@
+<% if action == :show %>
+    <li><a href="<%=users_url%>">All the DJs!</a></li>
+<% else %>
+    <li><a href="<%= edit_user_url(user) %>">Edit <%= user.email %></a></li>
+    <li><a href="<%= user_url(user) %>"> <%= user.email %>'s Page</a></li>
+
+<% end %>
+<ul>
+    <li><%= user.email %></li>
+</ul>
+

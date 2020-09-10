@@ -1,0 +1,28 @@
+<% if type == :new %>
+    <% action_url = albums_url %>
+    <% button_text = "Create New Album" %>
+<% else %>
+    <% action_url = album_url(album) %>
+    <% button_text = "Update Album" %>
+<% end %>
+
+<form action="<%= action_url %>" method="POST">
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+    <input type="hidden" name="album[band_id]" value="<%= params[:band_id] %>">
+    
+    <% if type == :edit %>
+        <input type="hidden" name="_method" value="PATCH">
+    <% end %>
+
+    <label>Title:
+    <input type="text" name="album[title]" value="<%= @album.title %>">
+    </label>
+    <label>Year:
+    <input type="text" name="album[year]" value="<%= @album.year %>">
+    </label>
+    <label>Live:
+    <input type="text" name="album[live]" value="<%= @album.live %>">
+    </label>
+
+    <input type="submit" value="<%= button_text %>">
+</form>

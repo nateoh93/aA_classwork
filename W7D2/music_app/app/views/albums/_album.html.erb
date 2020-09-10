@@ -1,0 +1,10 @@
+<% if action == :show %>
+    <li><a href="<%= albums_url%>">All the Albums!</a></li>
+<% else %>
+    <li><a href="<%= edit_album_url(album) %>">Edit <%= album.title %></a></li>
+    <li><a href="<%= album_url(album) %>"><%= album.title %>'s Page</a></li>
+<% end %>
+
+<ul>
+    <li><%= album.title %></li>
+</ul>

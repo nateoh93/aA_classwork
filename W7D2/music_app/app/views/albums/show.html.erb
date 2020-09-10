@@ -1,0 +1,11 @@
+<h1>This is <%= @album.title %>'s Page</h1>
+
+<%= render "album", album: @album, action: :show %>
+
+<li>
+    <form action="<%= album_url(@album) %>" method="POST">
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+        <input type="hidden" name="_method" value="DELETE">
+        <input type="submit" value="Burn Album">
+    </form>
+</li>
