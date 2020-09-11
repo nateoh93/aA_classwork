@@ -1,0 +1,21 @@
+.sections-nav > ul {
+	display: flex;
+    flex-direction: row;
+    justify-content: center;
+	align-items: center;
+	border-bottom: 1px solid $light-gray;
+	position: relative;
+    padding: 7px;
+    font-family: $sans-serif;
+}
+.nav-menu > li {
+    margin-right: 15px;
+}
+.nav-menu li:hover {
+    background-color: $light-gray;
+}
+
+a:hover {
+    text-decoration: underline;
+	text-decoration-color: black;
+}
