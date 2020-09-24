@@ -46,12 +46,13 @@ const pavlov = new Dog("Pavlov");
 
 Function.prototype.myBind = function() {
     let that = this;
+    debugger
     let args = Array.from(arguments);
     let context = args.shift();
     
     return function() {
         let callArgs = Array.from(arguments);
-        that.apply(context, args.concat(callArgs));
+        return that.apply(context, args.concat(callArgs));
     }
 };
 
@@ -60,7 +61,7 @@ Function.prototype.myBind2 = function(...args) {
     let context = args.shift();
     
     return (...callArgs) => {
-        this.apply(context, args.concat(callArgs));
+        return this.apply(context, args.concat(callArgs));
     }
 };
 
@@ -69,7 +70,7 @@ Function.prototype.myBind2 = function(...args) {
 // true
 
 // bind time args are "meow" and "Kush", no call time args
-// markov.says.myBind2(pavlov, "meow", "Kush")();
+markov.says.myBind(pavlov, "meow", "Kush")();
 // Pavlov says meow to Kush!
 // true
 
@@ -145,4 +146,4 @@ function sumThree(num1, num2, num3) {
 let f1 = sumThree.myCurry2(3); // tells `f1` to wait until 3 arguments are given before running `sumThree`
 f1 = f1(4); // [Function]
 f1 = f1(20); // [Function]
-console.log(f1 = f1(6)); // = 30
+// console.log(f1 = f1(6)); // = 30

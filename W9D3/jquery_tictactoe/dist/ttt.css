@@ -1,0 +1,78 @@
+body {
+    display: flex;
+    font-weight: bold;
+    font-family: sans-serif;
+    text-align: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-size: 60px;
+}
+
+h1 {
+    margin: 30px;
+    width: 100%;
+}
+
+ul {
+    background-color: grey;
+    display: flex;
+    width: 425px;
+    height: 425px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border: 5px solid black;
+    margin: 20px;
+}
+
+li {
+    /* width: 100px; */
+    width: 30.5%;
+    border: 6px solid black;
+    cursor: pointer;
+}
+
+li:hover {
+    background-color: yellow;
+}
+
+.x, .o {
+    background-color: white;
+    position: relative;
+}
+
+.x:hover, .o:hover {
+    background-color: white;
+ } 
+
+.x:after,
+.o:after {
+  display: block;
+  width: 100%;
+  font-size: 100px;
+  position: absolute;
+  line-height: 115px;
+}
+
+.x:after {
+  content: "x";
+}
+
+.o:after {
+  content: "o";
+}
+
+.game-over li{
+    color: red;
+    background-color: white;
+    cursor: default;
+}
+
+.winner-x .x, .winner-o .o {
+    background-color: green;
+    color: white;
+}
+
+.p {
+    color: black;
+    font-size: 30px;
+}
