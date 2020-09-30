@@ -21,7 +21,7 @@ class Weather extends React.Component {
 
         let request = new XMLHttpRequest();
         
-        request.open('GET', `http://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=e43f7b9c4ac203360f36341552bb0af7`, true);
+        // request.open('GET', `http://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=e43f7b9c4ac203360f36341552bb0af7`, true);
         // delete from git just in case!
 
 
