@@ -1,0 +1,53 @@
+
+body {
+    margin: auto;
+    width: 500px;
+}
+
+h1 {    
+    font-size: 40px;
+    font-style: bold;
+    margin-top: 10px;
+}
+
+.clock {
+    background-color: lightgrey;
+    display: flex;
+    flex-direction: column;
+    font-size: 30px;
+    font-style: bold;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+.date-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.time-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+#red {
+    color: #D90012;
+}
+
+#blue {
+    color: #0033A0;
+}
+
+#yellow {
+    color: #F2A800;
+}
+
+.tab {
+    border: 1px solid black;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+h2 {
+    font-size: 30px;
+}
