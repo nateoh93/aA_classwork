@@ -1,0 +1,27 @@
+body {
+    margin: 0 auto;
+    width: 50%;
+    text-align: center;
+}
+
+#root {
+    width: 400px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.board-grid {
+    background: lightgray;
+    display: flex;
+    align-items: center;
+}
+
+.tile {
+    border: 1px solid black;
+    width: 25px;
+    height: 25px;
+    border-style: inset;
+    border-style: outset;
+}
